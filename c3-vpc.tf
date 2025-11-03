@@ -5,7 +5,7 @@ module "vpc" {
   # version = "~> 2.78"
 
   # VPC Basic Details
-  name = "vpc-dev"
+  name = "vpc-gyanesh-dev"
   cidr = "10.0.0.0/16"   
   azs                 = ["ap-south-1a", "ap-south-1b"]
   private_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -28,24 +28,24 @@ module "vpc" {
   enable_dns_support = true
 
   public_subnet_tags = {
-    Type = "public-subnets"
+    Type = "gyanesh-public-subnets"
   }
 
   private_subnet_tags = {
-    Type = "private-subnets"
+    Type = "gyanesh-private-subnets"
   }
 
   database_subnet_tags = {
-    Type = "database-subnets"
+    Type = "gyanesh-database-subnets"
   }
 
   tags = {
-    Owner = "kalyan"
+    Owner = "gyanesh"
     Environment = "dev"
   }
 
   vpc_tags = {
-    Name = "vpc-dev"
+    Name = "vpc-gyanesh-dev"
   }
 }
 
